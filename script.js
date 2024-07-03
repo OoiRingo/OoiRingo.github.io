@@ -4,19 +4,19 @@ const ALERT_THRESHOLD = 5;
 
 const COLOR_CODES = {
   info: {
-    color: "green"
+    color: "blue"
   },
   warning: {
-    color: "orange",
+    color: "dkblue",
     threshold: WARNING_THRESHOLD
   },
   alert: {
-    color: "red",
+    color: "green",
     threshold: ALERT_THRESHOLD
   }
 };
 
-const TIME_LIMIT = 120;
+const TIME_LIMIT = 20;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
