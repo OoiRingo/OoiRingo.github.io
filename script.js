@@ -51,7 +51,7 @@ startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
-    document.getElementById("alarm-sound").play();
+  document.getElementById("alarm-sound").play();
 }
 
 function startTimer() {
