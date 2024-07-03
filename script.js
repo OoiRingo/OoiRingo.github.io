@@ -1,5 +1,3 @@
-// Credit: Mateusz Rybczonec
-
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
@@ -18,7 +16,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 1200;
+const TIME_LIMIT = 120;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -35,9 +33,9 @@ document.getElementById("app").innerHTML = `
         class="base-timer__path-remaining ${remainingPathColor}"
         d="
           M 50, 50
-          m -45, 0
-          a 45,45 0 1,0 90,0
-          a 45,45 0 1,0 -90,0
+          m 0, -45
+          a 45,45 0 1,1 0,90
+          a 45,45 0 1,1 0,-90
         "
       ></path>
     </g>
