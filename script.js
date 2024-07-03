@@ -4,19 +4,19 @@ const ALERT_THRESHOLD = 5;
 
 const COLOR_CODES = {
   info: {
-    color: "blue"
+    color: "green"
   },
   warning: {
-    color: "dkblue",
+    color: "orange",
     threshold: WARNING_THRESHOLD
   },
   alert: {
-    color: "green",
+    color: "red",
     threshold: ALERT_THRESHOLD
   }
 };
 
-const TIME_LIMIT = 20;
+const TIME_LIMIT = 120;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -44,12 +44,14 @@ document.getElementById("app").innerHTML = `
     timeLeft
   )}</span>
 </div>
+<audio id="alarm-sound" src="Beep.wav" preload="auto"></audio>
 `;
 
 startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
+  document.getElementById("alarm-sound").play();
 }
 
 function startTimer() {
