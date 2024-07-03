@@ -44,12 +44,14 @@ document.getElementById("app").innerHTML = `
     timeLeft
   )}</span>
 </div>
+<audio id="alarm-sound" src="Beep.wav" preload="auto"></audio>
 `;
 
 startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
+    document.getElementById("alarm-sound").play();
 }
 
 function startTimer() {
